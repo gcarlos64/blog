@@ -71,6 +71,9 @@ _build_posts() {
 }
 
 _main() {
+    rm -rf $build_dir
+    mkdir -p $build_dir/posts
+
     _build_index
     _build_posts
 }

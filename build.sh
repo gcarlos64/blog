@@ -1,5 +1,11 @@
 #!/bin/bash
-#set -exu
+# ------------------------------------------------------------------------------
+# Copyright (C) 2023  Carlos Eduardo Gallo Filho <gcarlos@disroot.org>
+# License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+# ------------------------------------------------------------------------------
+
 build_dir=build
 
 _get_metadata() {
@@ -7,8 +13,8 @@ _get_metadata() {
     local post=$1
     local post_file=posts/$post/$post.md
 
-    # Current metadata fields: title, date, author and description
-    local fields=':date:title:author:description:'
+    # Current metadata fields: title, date, and description
+    local fields=':date:title:description:'
     local field value
 
     while read line; do
@@ -21,7 +27,7 @@ _get_metadata() {
     done < $post_file
 
     # Here has an aditional entry, the second field.
-    echo ":$date:$post:$title:$author:$description:"
+    echo ":$date:$post:$title:$description:"
 }
 
 _build_index() {
@@ -38,18 +44,15 @@ _build_index() {
         date=$(cut -d: -f2 <<< "$i")
         post=$(cut -d: -f3 <<< "$i")
         title=$(cut -d: -f4 <<< "$i")
-        author=$(cut -d: -f5 <<< "$i")
-        description=$(cut -d: -f6 <<< "$i")
-        printf '# [%s](/posts/%s)\n%s - %s  \n%s\n\n' "$title"       \
-                                                      "$post"        \
-                                                      "$date"        \
-                                                      "$author"      \
-                                                      "$description" >> $index_file
+        description=$(cut -d: -f5 <<< "$i")
+        printf '# [%s](/posts/%s)\n*%s*  \n%s\n\n' "$title"       \
+                                                   "$post"        \
+                                                   "$date"        \
+                                                   "$description" >> $index_file
     done
 
     pandoc $index_file                    \
            --output $build_dir/index.html \
-           --metadata title=Posts         \
            --defaults defaults.yaml
 
     rm $index_file
@@ -70,12 +73,19 @@ _build_posts() {
     done
 }
 
+_build_about() {
+    pandoc site/about.md                  \
+           --output=$build_dir/about.html \
+           --defaults defaults.yaml
+}
+
 _main() {
     rm -rf $build_dir
     mkdir -p $build_dir/posts
 
     _build_index
     _build_posts
+    _build_about
 }
 
 _main "$@"

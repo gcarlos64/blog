@@ -18,7 +18,7 @@ $if(description-meta)$
 $endif$
   <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
   <style>
-    $styles.html()$
+    $styles.css()$
   </style>
 $for(css)$
   <link rel="stylesheet" href="$css$" />
@@ -35,38 +35,19 @@ $endif$
 </head>
 
 <body>
-$for(include-before)$
-    $include-before$
-$endfor$
-
 $header.html()$
 
 $if(title)$
 <header id="post-block-header">
-    <h2 class="title">$title$</h1>
-
-    $for(author)$
-        <p class="author">$author$</p>
-    $endfor$
-
     $if(date)$
-        <p class="date">$date$</p>
+        <p id="date">$date$</p>
     $endif$
-
-    $if(description)$
-        <div class="description">
-            $description$
-        </div>
-    $endif$
+    <h2 id="title">$title$</h1>
 </header>
 $endif$
 
 $body$
 
 $footer.html()$
-
-$for(include-after)$
-    $include-after$
-$endfor$
 </body>
 </html>

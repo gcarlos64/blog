@@ -6,11 +6,14 @@ highlight-style: zenburn
 toc: false
 shift-heading-level-by: 2
 variables:
-    #mainfont: Fira sans
-    fontsize: 18px
-    fontcolor: "#e4e0de"
-    linkcolor: "#e4e0de"
-    backgroundcolor: "#2f2c2a"
+    mainfont: "sans-serif"
+    fontsize: 16px
+    fg: "#DBDFD3" # main foreground
+    fg1: "#B1B5AB"
+    bg: "#16142D" # main background
+    color: "#8F8DE1" # main color
+    color1: "#B3B2FE"
     monofont: "'Fira Mono'"
     #monobackgroundcolor: "#010101"
-    site-title: My awesome blog
+    site-title: gcarlos
+    email: gcarlos@disroot.org

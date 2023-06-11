@@ -2,7 +2,7 @@ from: markdown
 to: html5
 standalone: true
 template: site/default.html
-highlight-style: zenburn
+highlight-style: site/highlight-style.theme
 toc: false
 shift-heading-level-by: 2
 variables:

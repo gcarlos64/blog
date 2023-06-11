@@ -73,9 +73,13 @@ _build_posts() {
     done
 }
 
-_build_about() {
+_build_other() {
     pandoc site/about.md                  \
            --output=$build_dir/about.html \
+           --defaults defaults.yaml
+
+    pandoc site/contact.md                  \
+           --output=$build_dir/contact.html \
            --defaults defaults.yaml
 }
 
@@ -85,7 +89,7 @@ _main() {
 
     _build_index
     _build_posts
-    _build_about
+    _build_other
 }
 
 _main "$@"

@@ -1,0 +1,16 @@
+from: markdown
+to: html5
+standalone: true
+template: site/default.html
+highlight-style: zenburn
+toc: false
+shift-heading-level-by: 2
+variables:
+    #mainfont: Fira sans
+    fontsize: 18px
+    fontcolor: "#e4e0de"
+    linkcolor: "#e4e0de"
+    backgroundcolor: "#2f2c2a"
+    monofont: "'Fira Mono'"
+    #monobackgroundcolor: "#010101"
+    site-title: My awesome blog

@@ -17,7 +17,7 @@ _get_metadata() {
 
         field=${line%%:*}
         value=${line#* }
-        [[ $fields == *:$field:*  ]] && eval "$field='$value'"
+        [[ $fields == *:$field:* ]] && eval "$field='$value'"
     done < $post_file
 
     # Here has an aditional entry, the second field.
@@ -33,13 +33,13 @@ _build_index() {
         metadata+=( "$(_get_metadata $post)" )
     done
 
-    mapfile sorted_metadata <<<"$(printf '%s\n' "${metadata[@]}" | sort -r)"
+    mapfile sorted_metadata <<< "$(printf '%s\n' "${metadata[@]}" | sort -r)"
     for i in "${sorted_metadata[@]}"; do
-        date=$(cut -d: -f2 <<<"$i")
-        post=$(cut -d: -f3 <<<"$i")
-        title=$(cut -d: -f4 <<<"$i")
-        author=$(cut -d: -f5 <<<"$i")
-        description=$(cut -d: -f6 <<<"$i")
+        date=$(cut -d: -f2 <<< "$i")
+        post=$(cut -d: -f3 <<< "$i")
+        title=$(cut -d: -f4 <<< "$i")
+        author=$(cut -d: -f5 <<< "$i")
+        description=$(cut -d: -f6 <<< "$i")
         printf '# [%s](/posts/%s)\n%s - %s  \n%s\n\n' "$title"       \
                                                       "$post"        \
                                                       "$date"        \
@@ -47,9 +47,9 @@ _build_index() {
                                                       "$description" >> $index_file
     done
 
-    pandoc $index_file \
+    pandoc $index_file                    \
            --output $build_dir/index.html \
-           --metadata title=Posts \
+           --metadata title=Posts         \
            --defaults defaults.yaml
 
     rm $index_file
@@ -62,7 +62,7 @@ _build_posts() {
         mkdir -p $post_dir
         cp posts/$post/* $post_dir/
 
-        pandoc $post_dir/$post.md \
+        pandoc $post_dir/$post.md            \
                --output=$post_dir/index.html \
                --defaults defaults.yaml
 

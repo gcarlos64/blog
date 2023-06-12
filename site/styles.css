@@ -2,13 +2,13 @@ $if(document-css)$
 html {
   line-height: $if(linestretch)$$linestretch$$else$1.5$endif$;
   font-family: $if(mainfont)$$mainfont$$else$Georgia, serif$endif$;
-  font-size: $if(fontsize)$$fontsize$$else$16px$endif$;
+  font-size: $if(fontsize)$$fontsize$$else$18px$endif$;
   color: $fg$;
   background-color: $bg$;
 }
 body {
   margin: 0 auto;
-  max-width: 36em;
+  max-width: 39em;
   padding-left: 0px;
   padding-right: 0px;
   padding-top: 0px;
@@ -43,6 +43,7 @@ body {
 }
 p {
   margin: 0.5em 0;
+  text-align: justify;
 }
 a {
   color: $color1$;
@@ -55,6 +56,7 @@ img {
   max-width: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
   color: $color$;
   margin-top: 1.4em;
   margin-bottom: 0em;
@@ -89,7 +91,7 @@ blockquote {
 code {
   font-family: $if(monofont)$$monofont$$else$Menlo, Monaco, 'Lucida Console', Consolas, monospace$endif$;
   background-color: $bg1$;
-  font-size: 85%;
+  font-size: 77%;
   margin: 0;
 }
 pre {
@@ -145,11 +147,13 @@ td {
 }
 
 #site-title {
+  font-family: sans-serif;
   font-size: 20px;
   color: $color$;
 }
 
 a.nav-item {
+  font-family: sans-serif;
   color: $color$;
   font-size: 18px;
   margin-left: 5px;
@@ -165,6 +169,7 @@ a.nav-item {
 $endif$
 
 #title {
+  font-family: sans-serif;
   margin-top: 0em;
 }
 #date {

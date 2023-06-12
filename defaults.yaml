@@ -6,11 +6,10 @@ highlight-style: site/highlight-style.theme
 toc: false
 shift-heading-level-by: 2
 variables:
-    mainfont: "sans-serif"
-    fontsize: 16px
     fg: "#DBDFD3" # main foreground
     fg1: "#B1B5AB"
     bg: "#16142D" # main background
+    bg1: "#201C31"
     color: "#8F8DE1" # main color
     color1: "#B3B2FE"
     site-title: gcarlos

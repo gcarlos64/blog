@@ -93,6 +93,7 @@ code {
   background-color: $bg1$;
   font-size: 77%;
   margin: 0;
+  padding: 2px 4px;
 }
 pre {
   margin: 1em 0;

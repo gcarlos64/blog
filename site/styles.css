@@ -140,11 +140,22 @@ td {
   padding: 0.125em 0.5em 0.25em 0.5em;
 }
 #site-header {
-  margin: 2em;
-  margin-left: 0em;
+  display: flex;
+  margin: 0em;
+  margin-top: 2em;
+  margin-bottom: 2em;
   text-align: center;
   font-weight: bold;
   border-bottom: 1px solid $fg$;
+}
+
+#site-footer {
+  margin: 0em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+  border-top: 1px solid $fg$;
+  padding-top: 15px;
 }
 
 #site-title {
@@ -161,9 +172,6 @@ a.nav-item {
   margin-right: 5px;
 }
 
-#header-inner {
-  display: flex;
-}
 #main-nav {
   margin-left: auto;
 }
@@ -172,6 +180,7 @@ $endif$
 #title {
   font-family: sans-serif;
   margin-top: 0em;
+  text-align: center;
 }
 #date {
   margin-bottom: 0em;

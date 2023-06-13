@@ -53,7 +53,8 @@ _build_index() {
 
     pandoc $index_file                    \
            --output $build_dir/index.html \
-           --defaults defaults.yaml
+           --defaults defaults.yaml \
+           --metadata title=Posts
 
     rm $index_file
 }

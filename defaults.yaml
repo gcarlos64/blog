@@ -1,4 +1,4 @@
-from: markdown
+from: markdown+emoji
 to: html5
 standalone: true
 template: site/default.html
@@ -6,6 +6,9 @@ highlight-style: site/highlight-style.theme
 toc: false
 shift-heading-level-by: 2
 variables:
+    mainfont: "'Fira Sans', sans-serif"
+    fontsize: 16px
+    line-height: 1.4
     fg: "#DBDFD3" # main foreground
     fg1: "#B1B5AB"
     bg: "#16142D" # main background

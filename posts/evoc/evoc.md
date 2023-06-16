@@ -28,7 +28,7 @@ and now I'm in the Xorg [EVoC](https://www.x.org/wiki/XorgEVoC/) :smile:.
 
 # Starting at the warm-up
 One of the first steps to prepare a proposal to GSoC was to complete the
-initial proposed warm-up activities, that is:
+initial proposed warm-up activities, that was:
 
 1. Setup a virtual machine
 2. Learn how to compile the Linux kernel
@@ -69,7 +69,7 @@ be 100% aware of everything that happens on all mailing lists).
 ## My first patch
 The last activity, but definitely not least, was about making my first
 patch (and sent it to the relevant mailing list) on the kernel. This
-was the most challenging activity to me, since I don't was really
+was the most challenging activity to me, since I wasn't really
 understanding, at that point, what any code seem was doing, it was just a
 lot of mystical code that I cannot understand yet. But it's okay, there is some
 simple things you can do to contribute without a really good understand
@@ -95,7 +95,7 @@ suggested articles) was vital to get into the intimidating place
 that is the Linux code without being stuck.
 
 # The proposal
-Then when I was warmed, I started to write the proposal, describing a
+Then when I was warmed up, I started to write the proposal, describing a
 bit of myself, how I did the warm-up and about what I would be proposing.
 
 The proposal was obvious due the initial project

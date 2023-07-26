@@ -125,6 +125,13 @@ wasn't expecting anything but another decline, but I was (fortunately)
 much wrong about this and so I'm here to tell the history where my proposal
 was accepted :smile:!
 
+# Who is my mentors
+I'll be mentored by these awesome people:
+
+- [André Almeida (tony)](https://andrealmeid.com/)
+- [Maíra Canal](https://mairacanal.github.io/)
+- [Tales L. Aparecida](https://tales-aparecida.github.io/tales-tips-and-tricks/)
+
 # What to expect now?
 I'm very very grateful and excited about this unique and perfect
 opportunity I'm having that is changing my life, so I will do my best

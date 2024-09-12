@@ -84,6 +84,10 @@ _build_other() {
            --defaults defaults.yaml
 }
 
+_install_blobs() {
+    mv blobs/* $build_dir/
+}
+
 _main() {
     rm -rf $build_dir
     mkdir -p $build_dir/posts
@@ -91,6 +95,7 @@ _main() {
     _build_index
     _build_posts
     _build_other
+    _install_blobs
 }
 
 _main "$@"

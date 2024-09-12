@@ -2,6 +2,8 @@
 title: Catching kernel crash on KUnit tests with GDB
 date: 2023-08-25
 description:
+mainfont: DejaVuSerif
+monofont: DejaVuSerif
 ...
 
 Getting into KUnit tests development, we usually fell in crafting a
